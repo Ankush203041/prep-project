@@ -1,0 +1,146 @@
+body{
+    background-image: url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/assets/images/topography.svg),linear-gradient(110deg, rgb(249, 61, 102), rgb(109, 71, 217));;
+}
+.container{
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+}
+.container 
+.box1{
+  background-color: yellow; 
+  margin: 23px; 
+  padding: 7px 7px;
+  font-size: xx-large;
+}
+.box2{
+    background-color: yellow;  
+    margin: 23px; 
+    padding: 7px 7px;
+    font-size: xx-large;
+  }
+  .box3{
+    background-color: yellow; 
+    margin: 23px; 
+    padding: 7px 7px;
+    font-size: xx-large; 
+  }
+  .box4{
+    background-color: yellow; 
+    margin: 23px; 
+    padding: 7px 7px; 
+    font-size: xx-large; 
+  }
+  .box5{
+    background-color: yellow;
+    margin: 23px; 
+    padding: 7px 7px;
+    font-size: xx-large;  
+  }
+  
+  .box6{
+      background: url(taco.jpg);
+      min-height: 400px;
+      max-width: 1200px;
+      grid-row-start: 2;
+      grid-row-end: 4;
+     
+    grid-column-start: 1; 
+    grid-column-end: 5;
+  }
+  .box7{
+      justify-content: center;
+      text-align: center;
+      grid-column-start: 5;
+      grid-column-end: 6;
+    background-color: yellow;  
+  }
+  .box8{
+      justify-content: center;
+      text-align: center;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    background-color: yellow;  
+  }
+  .box9{
+      min-height: 200px;
+    text-align: center;
+    justify-content: center;
+    background-color: white;  
+  }
+  .box9 span{
+       font-size:xx-large;
+  }
+  .box10{
+    min-height: 200px;
+      text-align: center;
+      justify-content: center;
+    background-color:white;  
+  }
+  .box10 span{
+    font-size:xx-large;
+}
+  .box11{
+    min-height: 200px;
+      text-align: center;
+      justify-content: center;
+    background-color: white;  
+  }
+  .box11 span{
+    font-size:xx-large;
+}
+  .box12{
+      min-height: 200px;
+      text-align: center;
+      justify-content: center;
+    background-color: white;  
+  }
+  .box12 span{
+    font-size:xx-large;
+}
+  .box13{
+      min-height: 400px;
+      text-align: center;
+      justify-content: center;
+      grid-column-start: 1;
+      grid-column-end: 6;
+    background-color:white; 
+      
+  }
+  .box13 img{
+      position:absolute;
+      top: 860px;
+      left: 32px;
+      
+  }
+  /* .box14{
+    background-color: yellow;  
+  }
+  .box15{
+    background-color: yellow;  
+  }
+  .box16{
+    background-color: yellow;  
+  }
+  .box17{
+    background-color: yellow;  
+  }
+  .box18{
+    background-color: yellow;  
+  }
+  .box19{
+    background-color: yellow;  
+  }
+  .box20{
+    background-color: yellow;  
+  }
+  .box21{
+    background-color: yellow;  
+  }
+  .box22{
+    background-color: yellow;  
+  }
+  .box23{
+    background-color: yellow;  
+  } */
