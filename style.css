@@ -2,145 +2,109 @@ body{
     background-image: url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/assets/images/topography.svg),linear-gradient(110deg, rgb(249, 61, 102), rgb(109, 71, 217));;
 }
 .container{
-    
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 3rem;
+  display: grid;
+  grid-gap: 20px;
 }
-.container 
-.box1{
-  background-color: yellow; 
-  margin: 23px; 
-  padding: 7px 7px;
+button{
+  background-color: rgba(255, 255, 0, 0.884);
+  padding: 10px 10px;
+}
+#list{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+#list li{
+  
+  list-style: none;
+  text-align: center;
+  background-color: rgba(255, 255, 0, 0.884);
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+#list li a{
+  color: black;
+  text-decoration: none;
+  font-size: x-large;
+}
+.top1{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 20px;
+}
+.head{
+  text-align: center;
+  justify-content: center;
+  background: url(taco.jpg);
+  grid-row-start: 1;
+  grid-row-end: 3;
+  min-height: 400px;
+}
+.head h1{
+
+  display: inline;
+  background-color: rgba(255, 255, 0, 0.884);
+}
+.head p{
+  display: inline;
+  
+  background-color: rgba(255, 255, 0, 0.884);
+}
+.cta1{
+  text-align: center;
+  font-size: xx-large;
+  background-color: rgba(255, 255, 0, 0.884);
+}
+.cta2{
+  font-size: xx-large;
+  text-align: center;
+  background-color: rgba(255, 255, 0, 0.884);
+}
+.features{
+  display: grid;
+  grid-gap: 20px;
+  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.feature{
+  text-align: center;
+  background-color: white;
+}
+.icon{
   font-size: xx-large;
 }
-.box2{
-    background-color: yellow;  
-    margin: 23px; 
-    padding: 7px 7px;
-    font-size: xx-large;
-  }
-  .box3{
-    background-color: yellow; 
-    margin: 23px; 
-    padding: 7px 7px;
-    font-size: xx-large; 
-  }
-  .box4{
-    background-color: yellow; 
-    margin: 23px; 
-    padding: 7px 7px; 
-    font-size: xx-large; 
-  }
-  .box5{
-    background-color: yellow;
-    margin: 23px; 
-    padding: 7px 7px;
-    font-size: xx-large;  
-  }
-  
-  .box6{
-      background: url(taco.jpg);
-      min-height: 400px;
-      max-width: 1200px;
-      grid-row-start: 2;
-      grid-row-end: 4;
-     
-    grid-column-start: 1; 
-    grid-column-end: 5;
-  }
-  .box7{
-      justify-content: center;
-      text-align: center;
-      grid-column-start: 5;
-      grid-column-end: 6;
-    background-color: yellow;  
-  }
-  .box8{
-      justify-content: center;
-      text-align: center;
-    grid-column-start: 5;
-    grid-column-end: 6;
-    background-color: yellow;  
-  }
-  .box9{
-      min-height: 200px;
-    text-align: center;
-    justify-content: center;
-    background-color: white;  
-  }
-  .box9 span{
-       font-size:xx-large;
-  }
-  .box10{
-    min-height: 200px;
-      text-align: center;
-      justify-content: center;
-    background-color:white;  
-  }
-  .box10 span{
-    font-size:xx-large;
+.about{
+  background: white;
+  padding:50px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  align-items: center;
 }
-  .box11{
-    min-height: 200px;
-      text-align: center;
-      justify-content: center;
-    background-color: white;  
-  }
-  .box11 span{
-    font-size:xx-large;
+.gallery {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-  .box12{
-      min-height: 200px;
-      text-align: center;
-      justify-content: center;
-    background-color: white;  
-  }
-  .box12 span{
-    font-size:xx-large;
+/* eske baad maine copy kiya hai */
+.gallery img {
+  width: 100%;
 }
-  .box13{
-      min-height: 400px;
-      text-align: center;
-      justify-content: center;
-      grid-column-start: 1;
-      grid-column-end: 6;
-    background-color:white; 
-      
-  }
-  .box13 img{
-      position:absolute;
-      top: 860px;
-      left: 32px;
-      
-  }
-  /* .box14{
-    background-color: yellow;  
-  }
-  .box15{
-    background-color: yellow;  
-  }
-  .box16{
-    background-color: yellow;  
-  }
-  .box17{
-    background-color: yellow;  
-  }
-  .box18{
-    background-color: yellow;  
-  }
-  .box19{
-    background-color: yellow;  
-  }
-  .box20{
-    background-color: yellow;  
-  }
-  .box21{
-    background-color: yellow;  
-  }
-  .box22{
-    background-color: yellow;  
-  }
-  .box23{
-    background-color: yellow;  
-  } */
+
+.gallery h2 {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.gallery h2:before, .gallery h2:after {
+  display: block;
+  content: '';
+  height: 10px;
+  background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
+}
+
+.gallery h2:after {
+  --direction: right;
+}
+
