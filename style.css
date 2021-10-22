@@ -1,43 +1,53 @@
 body{
     background-image: url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/assets/images/topography.svg),linear-gradient(110deg, rgb(249, 61, 102), rgb(109, 71, 217));;
 }
+img {
+  max-width: 100%;
+}
 .container{
+  width: 100%;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 button{
   background-color: rgba(255, 255, 0, 0.884);
-  padding: 10px 10px;
+  padding: 1rem;
 }
 #list{
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
 }
 #list li{
   
   list-style: none;
   text-align: center;
   background-color: rgba(255, 255, 0, 0.884);
-  margin: 10px 10px;
-  padding: 10px 10px;
+  margin:1rem;
+  padding: 1rem;
 }
 #list li a{
   color: black;
   text-decoration: none;
-  font-size: x-large;
+  font-size: 2rem;
 }
 .top1{
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "head head cta1"
+    "head head cta2";
 }
 .head{
-  text-align: center;
-  justify-content: center;
-  background: url(taco.jpg);
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-area: head;
   min-height: 400px;
+  background: white url(taco.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center
 }
 .head h1{
 
@@ -50,18 +60,23 @@ button{
   background-color: rgba(255, 255, 0, 0.884);
 }
 .cta1{
+  grid-area: cta1;
   text-align: center;
-  font-size: xx-large;
+  font-size: 2rem;
   background-color: rgba(255, 255, 0, 0.884);
 }
 .cta2{
-  font-size: xx-large;
+  grid-area: cta2;
+  font-size: 2rem;
   text-align: center;
   background-color: rgba(255, 255, 0, 0.884);
 }
+[aria-controls="list"] {
+  display: none;
+}
 .features{
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 1rem;
   
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -70,18 +85,18 @@ button{
   background-color: white;
 }
 .icon{
-  font-size: xx-large;
+  font-size: 2rem;
 }
 .about{
   background: white;
-  padding:50px;
+  padding:2rem;
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 40% 1fr;
   align-items: center;
 }
 .gallery {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 /* eske baad maine copy kiya hai */
@@ -107,4 +122,77 @@ button{
 .gallery h2:after {
   --direction: right;
 }
+@media (max-width: 1000px) {
+  .menu {
+    perspective: 800px;
+  }
+  [aria-controls="list"] {
+    display: block;
+    margin-bottom: 10px;
+  }
 
+  .list li {
+    max-height: 0;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.5s;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: grid;
+    max-height: 500px;
+    transform: rotateX(0);
+  }
+
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+
+  [aria-expanded="true"] .close {
+    display: inline-block;
+  }
+
+  [aria-expanded="true"] .open {
+    display: none;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .top1 {
+    grid-template-areas:
+      "head head"
+      "cta1 cta2"
+  }
+  /* About */
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .top1 {
+    grid-template-areas:
+      "head"
+      "cta1"
+      "cta2"
+  }
+}
+
+/* @media  (max-width:700px){
+  #list{
+     display: grid; 
+    grid-template-rows: repeat(5,1fr);
+  }
+  .top1{
+     display: grid; 
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-gap: 1rem; 
+  }
+  .features{
+      display: grid;
+    grid-gap: 1rem;  
+    
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  }
+} */
